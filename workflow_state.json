@@ -24,14 +24,14 @@
   ],
   "schedules": [
     {
-      "schedule_id": "698ba6f9ebe6fd87d1dcc0df",
+      "schedule_id": "698ba9a4ebe6fd87d1dcc0e0",
       "agent_id": "698ba6ee0ef7203b23a43d68",
       "agent_name": "Stock Analysis Agent",
-      "cron_expression": "0 7 * * *",
-      "timezone": "America/New_York",
-      "message": "Analyze the following stock watchlist and send the morning briefing report: AAPL, MSFT, GOOGL, AMZN, TSLA. Send the report to the configured email address.",
+      "cron_expression": "33 3 * * *",
+      "timezone": "Asia/Kolkata",
+      "message": "Analyze the following stock watchlist and send the morning briefing report to vidur@lyzr.ai: AAPL, MSFT, GOOGL, AMZN, TSLA. Send the report via Gmail to vidur@lyzr.ai with subject \"Morning Stock Briefing\".",
       "is_active": true,
-      "next_run_time": "2026-02-11T07:00:00-05:00",
+      "next_run_time": "2026-02-11T03:33:00+05:30",
       "max_retries": 3,
       "retry_delay": 300
     }

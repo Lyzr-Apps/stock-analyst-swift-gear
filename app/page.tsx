@@ -46,7 +46,7 @@ import {
 // ============================================================================
 
 const AGENT_ID = '698ba6ee0ef7203b23a43d68'
-const SCHEDULE_ID = '698ba6f9ebe6fd87d1dcc0df'
+const SCHEDULE_ID = '698ba9a4ebe6fd87d1dcc0e0'
 
 const DEFAULT_WATCHLIST = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'TSLA']
 
@@ -343,7 +343,7 @@ export default function Home() {
   const [newTicker, setNewTicker] = useState('')
 
   // Email settings
-  const [emailSettings, setEmailSettings] = useState<EmailSettings>({ email: '', enabled: false })
+  const [emailSettings, setEmailSettings] = useState<EmailSettings>({ email: 'vidur@lyzr.ai', enabled: true })
 
   // Analysis
   const [latestAnalysis, setLatestAnalysis] = useState<string>('')
@@ -441,7 +441,7 @@ export default function Home() {
     setActiveAgentId(AGENT_ID)
 
     const tickers = watchlist.join(', ')
-    const message = `Analyze the following stocks and provide a morning briefing report: ${tickers}. Include current price, daily change, key news, technical indicators, and market sentiment.`
+    const message = `Analyze the following stocks and provide a morning briefing report: ${tickers}. Include current price, daily change, key news, technical indicators, and market sentiment. Send the report via Gmail to vidur@lyzr.ai with subject "Morning Stock Briefing".`
 
     try {
       const result = await callAIAgent(message, AGENT_ID)
@@ -969,12 +969,12 @@ export default function Home() {
                       {schedule?.cron_expression ? cronToHuman(schedule.cron_expression) : 'Loading...'}
                     </p>
                     <p className="text-xs text-[hsl(220,12%,65%)] mt-0.5">
-                      {schedule?.cron_expression || '0 7 * * *'}
+                      {schedule?.cron_expression || '33 3 * * *'}
                     </p>
                   </div>
                   <div>
                     <p className="text-xs text-[hsl(220,12%,50%)] mb-1">Timezone</p>
-                    <p className="text-sm font-medium">{schedule?.timezone || 'America/New_York'}</p>
+                    <p className="text-sm font-medium">{schedule?.timezone || 'Asia/Kolkata'}</p>
                   </div>
                   <div>
                     <p className="text-xs text-[hsl(220,12%,50%)] mb-1">Status</p>
