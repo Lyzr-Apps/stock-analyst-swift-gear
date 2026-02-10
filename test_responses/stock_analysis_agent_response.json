@@ -1,0 +1,13 @@
+{
+  "agent_name": "Stock Analysis Agent",
+  "agent_id": "698ba6ee0ef7203b23a43d68",
+  "test_input": "Analyze the following stocks and provide a morning briefing report: AAPL, MSFT. Include current price, daily change, key news, technical indicators, and market sentiment for each stock.",
+  "response": {
+    "raw_text": "litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=sonar-reasoning-pro\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers"
+  },
+  "field_types": {},
+  "status": "failed",
+  "failure_reason": "LLM provider prefix missing. The agent model is configured as 'sonar-reasoning-pro' but LiteLLM requires the provider prefix, e.g. 'perplexity/sonar-reasoning-pro'.",
+  "suggested_fix": "Update the agent's model field from 'sonar-reasoning-pro' to 'perplexity/sonar-reasoning-pro' so that LiteLLM can route the request to the Perplexity API correctly.",
+  "timestamp": "2026-02-10T21:46:22.454832"
+}

@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Scheduled Trigger (Daily 7AM)",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "stock_agent",
+      "type": "Agent",
+      "label": "Stock Analysis Agent",
+      "nodeCategory": "agent"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Email Report",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "stock_agent"
+    },
+    {
+      "source": "stock_agent",
+      "target": "output_node"
+    }
+  ]
+}

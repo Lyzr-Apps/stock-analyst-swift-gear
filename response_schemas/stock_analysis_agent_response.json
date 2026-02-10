@@ -1,0 +1,47 @@
+{
+  "agent_name": "Stock Analysis Agent",
+  "agent_id": "698ba6ee0ef7203b23a43d68",
+  "agent_purpose": "Stock market analysis and morning briefing generation",
+  "description": "Agent test FAILED due to model provider misconfiguration. The model 'sonar-reasoning-pro' needs the 'perplexity/' provider prefix for LiteLLM routing. Expected response fields (based on agent purpose): result.stocks (array of stock analysis objects), result.briefing_summary (string), result.market_sentiment (string). Cannot verify actual schema until provider issue is fixed.",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "response": "string",
+      "action_taken": "string (optional)",
+      "data": "object (optional, any structured data)",
+      "suggestions": [
+        "string (optional)"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "response": "I've completed the task you requested",
+      "action_taken": "Processed the input and generated output",
+      "data": {
+        "key": "value"
+      },
+      "suggestions": [
+        "You might also want to try X"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Stock Analysis Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  },
+  "is_actual_tested": false,
+  "test_timestamp": "2026-02-10T21:47:33.198760",
+  "test_message_used": "Hello, provide a sample response",
+  "raw_test_response": "litellm.BadRequestError: LLM Provider NOT provided. Pass in the LLM provider you are trying to call. You passed model=sonar-reasoning-pro\n Pass model as E.g. For 'Huggingface' inference endpoints pass in `completion(model='huggingface/starcoder',..)` Learn more: https://docs.litellm.ai/docs/providers",
+  "test_error": "Response not valid JSON: Expecting value: line 1 column 1 (char 0)",
+  "actual_test_response": {
+    "raw_text": "### Morning Briefing Report\n\n**Date:** [Insert Today's Date]\n\n---\n\n#### Executive Summary\nThe stock market is exhibiting mixed sentiment ahead of today's trading session. With a focus on tech stocks, AAPL (Apple Inc.) and MSFT (Microsoft Corp.) are experiencing variations in daily changes but remain pivotal players in the overall market sentiment attributed to recent economic indicators and sector performance.\n\n---\n\n#### Individual Stock Analysis\n\n**1. Apple Inc. (AAPL)**\n   - **Current Price:** $[Insert Current Price]\n   - **Daily Change:** $[Insert Daily Change] ([Insert Daily % Change])\n   - **Trading Volume:** [Insert Trading Volume]\n   - **52-Week Range:** $[Insert 52-Week Low] - $[Insert 52-Week High]\n   - **Recent News:** \n     - [Insert key recent news, e.g., product launches, quarterly earnings, CEO comments, etc.]\n   - **Analyst Ratings/Consensus:** [Insert ratings, e.g., Buy, Hold, Sell and target price]\n   - **Technical Indicators:**\n     - **RSI:** [Insert RSI]\n     - **MACD:** [Insert MACD]\n     - **50-Day Moving Average:** $[Insert 50-Day MA]\n     - **200-Day Moving Average:** $[Insert 200-Day MA]\n\n---\n\n**2. Microsoft Corp. (MSFT)**\n   - **Current Price:** $[Insert Current Price]\n   - **Daily Change:** $[Insert Daily Change] ([Insert Daily % Change])\n   - **Trading Volume:** [Insert Trading Volume]\n   - **52-Week Range:** $[Insert 52-Week Low] - $[Insert 52-Week High]\n   - **Recent News:** \n     - [Insert key recent news, e.g., product updates, partnerships, earnings results, etc.]\n   - **Analyst Ratings/Consensus:** [Insert ratings, e.g., Buy, Hold, Sell and target price]\n   - **Technical Indicators:**\n     - **RSI:** [Insert RSI]\n     - **MACD:** [Insert MACD]\n     - **50-Day Moving Average:** $[Insert 50-Day MA]\n     - **200-Day Moving Average:** $[Insert 200-Day MA]\n\n---\n\n#### Market Overview\nToday, the broader market indices such as the S&P 500 and NASDAQ are reflecting [insert sentiment, e.g., bullish, bearish] trends following [insert key economic indicators, e.g., employment rates, inflation data, etc.]. Investors are particularly attentive to tech performance due to [insert relevant economic context].\n\n---\n\n#### Key Risks & Opportunities\n- **Risks:** \n  - [Identify risks, e.g., market volatility, economic indicators, regulatory changes, etc.]\n- **Opportunities:**\n  - Growth prospects in [specify areas such as cloud computing, AI, etc.], especially for [specific stocks].\n\nThis report provides a comprehensive overview of AAPL and MSFT aimed at aiding investment decisions based on current market conditions and performance indicators.\n\n---\n\n**Data Sources:** [Insert Names of Data Sources Used for Analysis]  \n**Timestamp:** [Insert Current Time]\n\n---\n\nPlease reach out if further details are required or if additional stocks need analysis."
+  },
+  "test_passed": false
+}
